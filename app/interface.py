@@ -1,9 +1,10 @@
 import gradio as gr
 from app.chatbot import RAGChatbot
+from config.config import config
 
 class ChatInterface:
     def __init__(self):
-        self.chatbot = RAGChatbot(model_id='mistralai/mixtral-8x7b-instruct-v01')
+        self.chatbot = RAGChatbot()
     
     def launch(self):
         interface = gr.Interface(
